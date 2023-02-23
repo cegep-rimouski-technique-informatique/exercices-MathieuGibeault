@@ -13,7 +13,26 @@ const spade1 = document.querySelector("#spade1");
 const spade2 = document.querySelector("#spade2");
 const spade3 = document.querySelector("#spade3");
 
-spade1.animate(spadeTumbling, spadeTiming);
+/*
+animSpade1 = () => {
+  spade1.animate(spadeTumbling, spadeTiming)
+},
+animSpade2 = () => {
+  spade2.animate(spadeTumbling, spadeTiming)
+},
+animSpade3 = () => {
+  spade3.animate(spadeTumbling, spadeTiming)
+}
+*/
 
-// codez ici
 
+
+
+
+async function spade123() {
+  await spade1.animate(spadeTumbling, spadeTiming).finished
+  await spade2.animate(spadeTumbling, spadeTiming).finished
+  await spade3.animate(spadeTumbling, spadeTiming).finished
+}
+
+spade123();
